@@ -1,0 +1,58 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+
+# Custom Use cases
+
+- story: faq path 1 # random number
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_list_options
+  - intent: ask_action
+    entities: 
+    - option: "1"
+  - slot_was_set:
+    - option: "1"
+  - action: action_random_number
+  
+- story: faq path 2 # article
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_list_options
+  - intent: ask_action
+    entities: 
+    - option: "2"
+  - slot_was_set:
+    - option: "2" 
+  - intent: ask_article
+  - action: action_article_result
