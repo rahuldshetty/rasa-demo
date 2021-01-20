@@ -1,0 +1,4 @@
+https://github.com/fetchableai/example-rasa-chatbot.git
+
+https://medium.com/fetchable/how-to-build-a-question-answering-chatbot-with-fetchable-and-rasa-2f61e5dfebe8
+
